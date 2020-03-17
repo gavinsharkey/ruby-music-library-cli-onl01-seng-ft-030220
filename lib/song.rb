@@ -1,5 +1,6 @@
 class Song
   attr_accessor :name
+  attr_reader :artist, :genre
 
   @@all = []
 
@@ -13,6 +14,7 @@ class Song
 
   def initialize(name, artist=nil)
     self.name = name
+
   end
 
   def self.create(name, artist=nil)
