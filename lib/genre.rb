@@ -1,5 +1,6 @@
 class Genre
   attr_accessor :name
+  attr_reader :songs
 
   @@all = []
 
@@ -13,6 +14,7 @@ class Genre
 
   def initialize(name)
     self.name = name
+    @songs = []
   end
 
   def self.create(name)
