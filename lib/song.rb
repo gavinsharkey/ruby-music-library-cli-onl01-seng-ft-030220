@@ -12,9 +12,8 @@ class Song
     @@all.clear
   end
 
-  def initialize(name, artist=nil)
+  def initialize(name, artist=nil, genre=nil)
     self.name = name
-
   end
 
   def self.create(name, artist=nil)
@@ -25,5 +24,10 @@ class Song
 
   def save
     @@all << self
+  end
+
+  def artist=(artist)
+    @artist = artist
+    artist.add_song(self)
   end
 end
